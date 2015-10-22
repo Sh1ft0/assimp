@@ -92,11 +92,11 @@ SET(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Debug Postfitx for lib, samples and to
 option ( BUILD_SHARED_LIBS "Build a shared version of the library" ON )
 
 # Only generate this target if no higher-level project already has
-IF (NOT TARGET uninstall)
-    # add make uninstall capability
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules/cmake_uninstall.cmake.in" "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake" IMMEDIATE @ONLY)
-    add_custom_target(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
-ENDIF()
+#IF (NOT TARGET uninstall)
+#	# add make uninstall capability
+#	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules/cmake_uninstall.cmake.in" "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake" IMMEDIATE @ONLY)
+#	add_custom_target(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+#ENDIF()
 
 # Globally enable Boost resp. the Boost workaround – it is also needed by the
 # tools which include the Assimp headers.
